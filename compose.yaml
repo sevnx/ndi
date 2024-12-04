@@ -1,0 +1,16 @@
+services:
+  ndi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ndi.rule=Host(`ndi.desforge.dev`)"
+      - "traefik.http.routers.ndi.entrypoints=websecure"
+      - "traefik.http.routers.ndi.tls.certresolver=myresolver"
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
