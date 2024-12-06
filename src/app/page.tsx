@@ -3,6 +3,9 @@ import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
 import images from '@/constants/images';
 import { AnimatedSvg } from '@/components/animated-svg';
+import { addBadge } from '@/components/badge';
+import Banquise from '@/components/banquise';
+import EndPage from '@/components/endpage';
 
 export const metadata: Metadata = {
   title: 'Accueil | KeyIcy'
@@ -99,13 +102,10 @@ export default function Home() {
       </div>
       <div className="pt-12 flex justify-center">
         <div className="w-3/4">
-          <Image 
-            src={images.Banquise} 
-            alt="Animation de la banquise" 
-            className="w-full h-auto shadow-lg"
-          />
+          <Banquise />
         </div>
       </div>
+      <EndPage />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { Button } from '@/components';
 import { useEffect, useState } from 'react';
 import images from "@/constants/images";
 import { StaticImageData } from 'next/image';
+import { addBadge } from "./badge";
 
 interface GridItem {
   id: string;
@@ -172,6 +173,13 @@ export default function CaptchaGame() {
   const [draggedItem, setDraggedItem] = useState<GridItem | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [leftGridActive, setLeftGridActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isCorrect === true) {
+      addBadge('Captcha');
+    }
+  }, [isCorrect]);
+
   useEffect(() => {
     // Helper function to create grid items
     const createGridItems = (gridId: number) => {

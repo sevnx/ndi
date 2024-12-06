@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import images from '@/constants/images'
 import { Separator } from '@/components/ui/separator'
+import { addBadge } from './badge'
 
 export default function NightmareCookieClient() {
   const tempValues = [0, 0.5, 1, 1.5, 2, 2.5]
@@ -18,7 +19,9 @@ export default function NightmareCookieClient() {
   const screenHeight = typeof window !== 'undefined' ? window.innerHeight : 0
 
   useEffect(() => {
-    if (gameOver) return
+    if (gameOver) {
+      addBadge('Cookie Fail')
+    }
 
     const moveSvg = () => {
       if (!isPaused) {
