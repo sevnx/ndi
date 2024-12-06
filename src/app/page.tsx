@@ -19,8 +19,8 @@ export default function Home() {
           Nos artères et les courants marins, nos poumons et le plancton...
           De surprenantes similitudes relient notre corps aux océans.
           Des liens qui nous rappellent une évidence :
-          la santé des mers n'est pas qu'une question d'écologie,
-          c'est un enjeu vital pour la Terre.
+          la santé des mers n&apos;est pas qu&apos;une question d&apos;écologie,
+          c&apos;est un enjeu vital pour la Terre.
         </p>
       </div>
       <div className="mb-12">
@@ -33,9 +33,9 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">
               Les courants océaniques sont les artères de notre planète, transportant chaleur, 
               nutriments et oxygène à travers les mers du monde entier. Cette circulation thermohaline, 
-              comparable à notre système sanguin, maintient l'équilibre thermique de la Terre et nourrit 
-              d'innombrables écosystèmes marins. Lorsque ces courants sont perturbés par le réchauffement 
-              climatique, c'est tout l'équilibre de la vie marine qui est menacé, comme un cœur qui 
+              comparable à notre système sanguin, maintient l&apos;équilibre thermique de la Terre et nourrit 
+              d&apos;innombrables écosystèmes marins. Lorsque ces courants sont perturbés par le réchauffement 
+              climatique, c&apos;est tout l&apos;équilibre de la vie marine qui est menacé, comme un cœur qui 
               battrait de façon irrégulière.
             </p>
           </div>
@@ -51,10 +51,10 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-4">Le souffle des océans</h2>
             <p className="text-lg text-muted-foreground">
               Les océans sont les véritables poumons de notre planète bleue. À travers le 
-              phytoplancton et les algues marines, ils produisent plus de la moitié de l'oxygène 
+              phytoplancton et les algues marines, ils produisent plus de la moitié de l&apos;oxygène 
               que nous respirons. Ce processus vital de photosynthèse marine absorbe également le 
-              CO₂ atmosphérique, régulant ainsi naturellement notre climat. Mais aujourd'hui, 
-              l'acidification des océans menace cet équilibre fragile, compromettant la capacité 
+              CO₂ atmosphérique, régulant ainsi naturellement notre climat. Mais aujourd&apos;hui, 
+              l&apos;acidification des océans menace cet équilibre fragile, compromettant la capacité 
               des océans à maintenir cette respiration planétaire essentielle.
             </p>
           </div>
@@ -70,10 +70,10 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-4">Les barrières protectrices de la vie marine</h2>
             <p className="text-lg text-muted-foreground">
               Les récifs coralliens constituent un système immunitaire naturel pour nos océans. 
-              Tels des sentinelles, ils protègent les côtes de l'érosion tout en abritant une 
+              Tels des sentinelles, ils protègent les côtes de l&apos;érosion tout en abritant une 
               biodiversité exceptionnelle. Ces écosystèmes complexes filtrent les eaux et maintiennent 
-              leur qualité, créant des zones refuges indispensables pour d'innombrables espèces marines. 
-              Leur disparition progressive sous l'effet du réchauffement climatique menace cet équilibre millénaire.
+              leur qualité, créant des zones refuges indispensables pour d&apos;innombrables espèces marines. 
+              Leur disparition progressive sous l&apos;effet du réchauffement climatique menace cet équilibre millénaire.
             </p>
           </div>
         </div>
@@ -85,12 +85,12 @@ export default function Home() {
             <AnimatedSvg image1={images.Peau} image2={images.SurfaceOcean} />
           </div>
           <div className="w-full md:w-2/3">
-            <h2 className="text-3xl font-semibold mb-4">L'interface entre deux mondes</h2>
+            <h2 className="text-3xl font-semibold mb-4">L&apos;interface entre deux mondes</h2>
             <p className="text-lg text-muted-foreground">
               La surface des océans agit comme une peau protectrice pour notre planète, régulant 
-              les échanges thermiques et gazeux avec l'atmosphère. Cette interface délicate maintient 
+              les échanges thermiques et gazeux avec l&apos;atmosphère. Cette interface délicate maintient 
               un équilibre climatique stable depuis des millénaires. Le réchauffement des eaux de 
-              surface et la pollution perturbent aujourd'hui ces échanges vitaux, affectant les cycles 
+              surface et la pollution perturbent aujourd&apos;hui ces échanges vitaux, affectant les cycles 
               naturels qui maintiennent la stabilité de notre climat global.
             </p>
           </div>

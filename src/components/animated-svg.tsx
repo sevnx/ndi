@@ -17,7 +17,7 @@ export const AnimatedSvg: React.FC<AnimatedSvgProps> = ({ image1, image2, classN
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentImage((current: any) => current === image1 ? image2 : image1);
+        setCurrentImage((current) => current === image1 ? image2 : image1);
         setIsTransitioning(false);
       }, 300);
     }, 5000);

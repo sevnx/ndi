@@ -92,7 +92,7 @@ export default function ReferenceCaptcha() {
             Pourquoi cette comparaison ?
           </h4>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            En comprenant les similitudes entre le fonctionnement de l'océan et celui de notre propre corps, nous prenons conscience que préserver l&apos;océan, c&apos;est préserver la vie dans son ensemble. Nos actions quotidiennes influencent la santé de cet écosystème global, tout comme nos choix affectent notre propre santé.
+            En comprenant les similitudes entre le fonctionnement de l&apos;océan et celui de notre propre corps, nous prenons conscience que préserver l&apos;océan, c&apos;est préserver la vie dans son ensemble. Nos actions quotidiennes influencent la santé de cet écosystème global, tout comme nos choix affectent notre propre santé.
           </p>
         </div>
       </main>
