@@ -1,109 +1,109 @@
+import { Metadata } from 'next';
+import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
+import images from '@/constants/images';
+import { AnimatedSvg } from '@/components/animated-svg';
+
+export const metadata: Metadata = {
+  title: 'Accueil | KeyIcy'
+};
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)] p-4">
-      <div className="max-w-[1120px] mx-auto">
-        <div className="flex flex-col items-center gap-8 pt-16 pb-16">
-          <Image
-            className="dark:invert"
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-          <ol className="list-inside list-decimal text-sm text-center font-[family-name:var(--font-geist-mono)]">
-            <li className="mb-2">
-              Get started by editing{" "}
-              <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-                src/app/page.tsx
-              </code>
-              .
-            </li>
-            <li>Save and see your changes instantly.</li>
-          </ol>
-
-          <div className="flex gap-4 items-center flex-col sm:flex-row">
-            <a
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className="dark:invert"
-                src="/vercel.svg"
-                alt="Vercel logomark"
-                width={20}
-                height={20}
-              />
-              Deploy now
-            </a>
-            <a
-              className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read our docs
-            </a>
+    <div className="min-h-screen pt-40 pb-12 max-w-[1120px] mx-auto px-4 md:px-0">
+      <div className="text-left mb-12">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          Corps et océan : un équilibre vital à préserver
+        </h1>
+        <p className="text-lg text-muted-foreground">
+          Nos artères et les courants marins, nos poumons et le plancton...
+          De surprenantes similitudes relient notre corps aux océans.
+          Des liens qui nous rappellent une évidence :
+          la santé des mers n'est pas qu'une question d'écologie,
+          c'est un enjeu vital pour la Terre.
+        </p>
+      </div>
+      <div className="mb-12">
+        <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.FluxMarin} image2={images.Artere} />
           </div>
-
-          <div className="flex gap-6 flex-wrap items-center justify-center">
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/file.svg"
-                alt="File icon"
-                width={16}
-                height={16}
-              />
-              Learn
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/window.svg"
-                alt="Window icon"
-                width={16}
-                height={16}
-              />
-              Examples
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/globe.svg"
-                alt="Globe icon"
-                width={16}
-                height={16}
-              />
-              Go to nextjs.org →
-            </a>
+          <div className="w-full md:w-2/3">
+            <h2 className="text-3xl font-semibold mb-4">La grande circulation vitale</h2>
+            <p className="text-lg text-muted-foreground">
+              Les courants océaniques sont les artères de notre planète, transportant chaleur, 
+              nutriments et oxygène à travers les mers du monde entier. Cette circulation thermohaline, 
+              comparable à notre système sanguin, maintient l'équilibre thermique de la Terre et nourrit 
+              d'innombrables écosystèmes marins. Lorsque ces courants sont perturbés par le réchauffement 
+              climatique, c'est tout l'équilibre de la vie marine qui est menacé, comme un cœur qui 
+              battrait de façon irrégulière.
+            </p>
           </div>
         </div>
-        <div className="space-y-4">
-          {[...Array(13)].map((_, i) => (
-            <p key={i}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum eaque repellendus nam, fuga saepe debitis, neque nulla incidunt vero totam et, aperiam quod possimus officiis nemo quaerat quas ducimus exercitationem!
+        <Separator className="mt-12" />
+      </div>
+      <div className="mb-12">
+        <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.Poumon} image2={images.Phytoplancton} />
+          </div>
+          <div className="w-full md:w-2/3">
+            <h2 className="text-3xl font-semibold mb-4">Le souffle des océans</h2>
+            <p className="text-lg text-muted-foreground">
+              Les océans sont les véritables poumons de notre planète bleue. À travers le 
+              phytoplancton et les algues marines, ils produisent plus de la moitié de l'oxygène 
+              que nous respirons. Ce processus vital de photosynthèse marine absorbe également le 
+              CO₂ atmosphérique, régulant ainsi naturellement notre climat. Mais aujourd'hui, 
+              l'acidification des océans menace cet équilibre fragile, compromettant la capacité 
+              des océans à maintenir cette respiration planétaire essentielle.
             </p>
-          ))}
+          </div>
+        </div>
+        <Separator className="mt-12" />
+      </div>
+      <div className="mb-12">
+        <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.SystemeImmunitaire} image2={images.Corail} />
+          </div>
+          <div className="w-full md:w-2/3">
+            <h2 className="text-3xl font-semibold mb-4">Les barrières protectrices de la vie marine</h2>
+            <p className="text-lg text-muted-foreground">
+              Les récifs coralliens constituent un système immunitaire naturel pour nos océans. 
+              Tels des sentinelles, ils protègent les côtes de l'érosion tout en abritant une 
+              biodiversité exceptionnelle. Ces écosystèmes complexes filtrent les eaux et maintiennent 
+              leur qualité, créant des zones refuges indispensables pour d'innombrables espèces marines. 
+              Leur disparition progressive sous l'effet du réchauffement climatique menace cet équilibre millénaire.
+            </p>
+          </div>
+        </div>
+        <Separator className="mt-12" />
+      </div>
+      <div>
+        <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.Peau} image2={images.SurfaceOcean} />
+          </div>
+          <div className="w-full md:w-2/3">
+            <h2 className="text-3xl font-semibold mb-4">L'interface entre deux mondes</h2>
+            <p className="text-lg text-muted-foreground">
+              La surface des océans agit comme une peau protectrice pour notre planète, régulant 
+              les échanges thermiques et gazeux avec l'atmosphère. Cette interface délicate maintient 
+              un équilibre climatique stable depuis des millénaires. Le réchauffement des eaux de 
+              surface et la pollution perturbent aujourd'hui ces échanges vitaux, affectant les cycles 
+              naturels qui maintiennent la stabilité de notre climat global.
+            </p>
+          </div>
+        </div>
+        <Separator className="mt-12" />
+      </div>
+      <div className="pt-12 flex justify-center">
+        <div className="w-3/4">
+          <Image 
+            src={images.Banquise} 
+            alt="Animation de la banquise" 
+            className="w-full h-auto shadow-lg"
+          />
         </div>
       </div>
     </div>
