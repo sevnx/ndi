@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import images from '@/constants/images'
+import { Separator } from '@/components/ui/separator'
 
 export default function NightmareCookieClient() {
   const tempValues = [0, 0.5, 1, 1.5, 2, 2.5]
@@ -35,7 +36,7 @@ export default function NightmareCookieClient() {
 
     const interval = setInterval(moveSvg, 10);
     return () => clearInterval(interval);
-  }, [isPaused, speed, gameOver]);
+  }, [isPaused, speed, gameOver, screenHeight]);
 
   useEffect(() => {
     const percentage = (svgTranslation / screenHeight) * 100;
@@ -65,9 +66,37 @@ export default function NightmareCookieClient() {
     }, 1000);
   };
 
+  const sections = [
+    {
+      temp: 2,
+      title: "Point de non-retour",
+      content: "Les écosystèmes océaniques s'effondrent à un rythme alarmant. La montée rapide du niveau de la mer force des millions de personnes à quitter les zones côtières. Les océans, autrefois régulateurs du climat, deviennent des moteurs de chaos planétaire."
+    },
+    {
+      temp: 1.5,
+      title: "L'océan s'essouffle",
+      content: "Les océans deviennent de plus en plus acides à cause de l'absorption du CO₂, menaçant la chaîne alimentaire marine. Les phénomènes climatiques extrêmes, comme les ouragans, gagnent en fréquence et en intensité: C'est ce qu'est estimé d'arriver en 2100."
+    },
+    {
+      temp: 1,
+      title: "Dommages permanents",
+      content: "Les coraux subissent des dommages irréversibles. La fonte des glaciers accélère, contribuant à l'élévation du niveau de la mer. Les zones côtières voient leurs habitats marins, comme les mangroves, commencer à disparaître. Cela arrivera en 2030 !"
+    },
+    {
+      temp: 0.5,
+      title: "Premiers impacts",
+      content: "La température des océans augmente considérablement, entraînant le blanchissement des coraux à grande échelle. Les courants océaniques commencent à se perturber, menaçant les écosystèmes marins et les stocks de poissons."
+    },
+    {
+      temp: 0,
+      title: "Les signes avant-coureurs",
+      content: "Les eaux des océans commencent à absorber la chaleur supplémentaire. Les écosystèmes marins, comme les récifs coralliens, ressentent les premiers signes de stress thermique, mais la plupart résistent encore."
+    }
+  ];
+
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)] p-4">
-      <div className="max-w-[1120px] mx-auto" style={{
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <div className="max-w-[1120px] mx-auto px-4 md:px-0" style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-end",
@@ -97,52 +126,29 @@ export default function NightmareCookieClient() {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center gap-8 pt-16 pb-16"
-          style={{alignSelf: "flex-start", width: "85%"}}>
-          <section className="w-full">
-            <h2>Section 1</h2>
-            <p>
-            0.5 °C Les eaux des océans commencent à absorber la chaleur supplémentaire. Les écosystèmes marins, comme les récifs coralliens, ressentent les premiers signes de stress thermique, mais la plupart résistent encore.
-            </p>
-          </section>
-        </div>
-        <div className="flex flex-col items-center gap-8 pt-16 pb-16"
-          style={{alignSelf: "flex-start", width: "85%"}}>
-          <section className="w-full">
-            <h2>Section 2</h2>
-            <p>
-            1.0 °C La température des océans augmente considérablement, entraînant le blanchissement des coraux à grande échelle. Les courants océaniques commencent à se perturber, menaçant les écosystèmes marins et les stocks de poissons.
-            </p>
-          </section>
-        </div>
-        <div className="flex flex-col items-center gap-8 pt-16 pb-16"
-          style={{alignSelf: "flex-start", width: "85%"}}>
-          <section className="w-full">
-            <h2>Section 3</h2>
-            <p>
-            1.5 °C Les coraux subissent des dommages irréversibles. La fonte des glaciers accélère, contribuant à l’élévation du niveau de la mer. Les zones côtières voient leurs habitats marins, comme les mangroves, commencer à disparaître. Cela arrivera en 2030 !
-            </p>
-          </section>
-        </div>
-        <div className="flex flex-col items-center gap-8 pt-16 pb-16"
-          style={{alignSelf: "flex-start", width: "85%"}}>
-          <section className="w-full">
-            <h2>Section 4</h2>
-            <p>
-            2.0 °C Les océans deviennent de plus en plus acides à cause de l’absorption du CO₂, menaçant la chaîne alimentaire marine. Les phénomènes climatiques extrêmes, comme les ouragans, gagnent en fréquence et en intensité: C'est ce qu'est estimé d'arriver en 2100.
-            </p>
-          </section>
-        </div>
-        <div className="flex flex-col items-center gap-8 pt-16 pb-16"
-          style={{alignSelf: "flex-start", width: "85%"}}>
-          <section className="w-full">
-            <h2>Section 5</h2>
-            <p>
-            2.5 °C Les écosystèmes océaniques s’effondrent à un rythme alarmant. La montée rapide du niveau de la mer force des millions de personnes à quitter les zones côtières. Les océans, autrefois régulateurs du climat, deviennent des moteurs de chaos planétaire.
-            </p>
-          </section>
+        
+        <div className="w-full flex flex-col items-start gap-8">
+          {sections.map((section, index) => (
+            <div key={index} className="w-full pt-12 pb-12">
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="bg-blue-500 text-white px-3 py-1 rounded-md text-sm font-medium">
+                    +{section.temp}°C
+                  </div>
+                  <h2 className="text-xl font-semibold">{section.title}</h2>
+                </div>
+                <p className="text-muted-foreground mt-2">
+                  {section.content}
+                </p>
+              </div>
+              {index < sections.length - 1 && (
+                <Separator className="mt-8" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
+      
       <div className="fixed bottom-0 left-0 w-full" style={{transform: 'translateY(107vh)'}}>
         <div className="w-full" style={{position: 'relative'}}>
           <Image

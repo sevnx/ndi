@@ -1,5 +1,5 @@
-import { Metadata } from 'next'
-import NightmareCookie from '@/components/nightmare-cookie'
+import { Metadata } from 'next';
+import NightmareCookie from '@/components/nightmare-cookie';
 
 export const metadata: Metadata = {
   title: 'Nightmare Cookie',

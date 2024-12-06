@@ -4,9 +4,18 @@ import KeyIcyStade2 from '../assets/images/icy_stade_2.svg';
 import KeyIcyStade3 from '../assets/images/icy_stade_3.svg';
 import KeyIcyStade4 from '../assets/images/icy_stade_4.svg';
 import KeyIcyStade5 from '../assets/images/icy_stade_5.svg';
+
 import Vague from '../assets/images/vague.svg';
 import VagueFatale from '../assets/images/vague_fatale.svg';
 import Banquise from '../assets/illustrations/banquise.gif';
+import Artere from '../assets/images/artère.svg';
+import Corail from '../assets/images/corail.svg';
+import FluxMarin from '../assets/images/flux_marin.svg';
+import Peau from '../assets/images/peau.svg';
+import Phytoplancton from '../assets/images/phytoplancton.svg';
+import Poumon from '../assets/images/poumon.svg';
+import SurfaceOcean from '../assets/images/surface_océan.svg';
+import SystemeImmunitaire from '../assets/images/système_immunitaire.svg';
 
 import Illus1Grid1 from '../assets/illustrations/grid_1/illus_1.png';
 import Illus2Grid1 from '../assets/illustrations/grid_1/illus_2.png';
@@ -38,6 +47,14 @@ const images = {
   Vague,
   VagueFatale,
   Banquise,
+  Artere,
+  Corail,
+  FluxMarin,
+  Peau,
+  Phytoplancton,
+  Poumon,
+  SurfaceOcean,
+  SystemeImmunitaire,
   grid1: {
     illus1: Illus1Grid1,
     illus2: Illus2Grid1,

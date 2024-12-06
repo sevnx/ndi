@@ -15,6 +15,7 @@ export function NavigationBar() {
   const navigationLinks = [
     { href: '/challenges/nightmare-cookie', label: 'Nightmare Cookie' },
     { href: '/challenges/captcha', label: 'Captcha' },
+    { href: '/challenges/reference-captcha', label: 'Référence Captcha' }
   ];
 
   return (

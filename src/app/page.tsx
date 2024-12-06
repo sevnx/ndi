@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
 import images from '@/constants/images';
+import { AnimatedSvg } from '@/components/animated-svg';
 
 export const metadata: Metadata = {
   title: 'Accueil | KeyIcy'
@@ -15,17 +16,17 @@ export default function Home() {
           Corps et océan : un équilibre vital à préserver
         </h1>
         <p className="text-lg text-muted-foreground">
-        Nos artères et les courants marins, nos poumons et le plancton...
-        De surprenantes similitudes relient notre corps aux océans.
-        Des liens qui nous rappellent une évidence :
-        la santé des mers n'est pas qu'une question d'écologie,
-        c'est un enjeu vital pour la Terre.
+          Nos artères et les courants marins, nos poumons et le plancton...
+          De surprenantes similitudes relient notre corps aux océans.
+          Des liens qui nous rappellent une évidence :
+          la santé des mers n'est pas qu'une question d'écologie,
+          c'est un enjeu vital pour la Terre.
         </p>
       </div>
       <div className="mb-12">
         <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg flex items-center justify-center">
-            <span className="text-muted-foreground">SVG 1</span>
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.FluxMarin} image2={images.Artere} />
           </div>
           <div className="w-full md:w-2/3">
             <h2 className="text-3xl font-semibold mb-4">La grande circulation vitale</h2>
@@ -43,8 +44,8 @@ export default function Home() {
       </div>
       <div className="mb-12">
         <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg flex items-center justify-center">
-            <span className="text-muted-foreground">SVG 2</span>
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.Poumon} image2={images.Phytoplancton} />
           </div>
           <div className="w-full md:w-2/3">
             <h2 className="text-3xl font-semibold mb-4">Le souffle des océans</h2>
@@ -62,8 +63,8 @@ export default function Home() {
       </div>
       <div className="mb-12">
         <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg flex items-center justify-center">
-            <span className="text-muted-foreground">SVG 3</span>
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.SystemeImmunitaire} image2={images.Corail} />
           </div>
           <div className="w-full md:w-2/3">
             <h2 className="text-3xl font-semibold mb-4">Les barrières protectrices de la vie marine</h2>
@@ -80,8 +81,8 @@ export default function Home() {
       </div>
       <div>
         <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg flex items-center justify-center">
-            <span className="text-muted-foreground">SVG 4</span>
+          <div className="w-full md:w-1/3 aspect-square bg-muted rounded-lg">
+            <AnimatedSvg image1={images.Peau} image2={images.SurfaceOcean} />
           </div>
           <div className="w-full md:w-2/3">
             <h2 className="text-3xl font-semibold mb-4">L'interface entre deux mondes</h2>
