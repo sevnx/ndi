@@ -208,7 +208,7 @@ export default function Home() {
   };
 
   const handleShuffle = (gridId: number) => {
-    setItems(prevItems => {
+    setItems((prevItems: GridItem[]) => {
       const gridItems = prevItems.filter(item => item.gridId === gridId);
       const otherItems = prevItems.filter(item => item.gridId !== gridId);
       
@@ -256,6 +256,26 @@ export default function Home() {
       setIsCorrect(isMatch);
     }
   };
+
+  useEffect(() => {
+    if (!leftGridActive) {
+      setItems(prevItems => {
+        const grid1Items = prevItems
+          .filter((item: GridItem) => item.gridId === 1)
+          .map((item: GridItem, index: number) => ({ ...item, position: index }));
+        const otherItems = prevItems.filter(item => item.gridId !== 1);
+        return [...grid1Items, ...otherItems];
+      });
+    } else {
+      setItems(prevItems => {
+        const grid2Items = prevItems
+          .filter((item: GridItem) => item.gridId === 2)
+          .map((item, index) => ({ ...item, position: index }));
+        const otherItems = prevItems.filter(item => item.gridId !== 2);
+        return [...grid2Items, ...otherItems];
+      });
+    }
+  }, [leftGridActive]);
 
   const FeedbackMessage = () => {
     if (isCorrect === null) return null;
