@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import '../styles/globals.css';
 import { Metadata } from 'next';
 import { ThemeProvider, NavigationBar, Footer } from '@/components';
+import BadgeHeader from '@/components/badge';
 
 const geistSans = localFont({
   src: "../assets/fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           disableTransitionOnChange
         >
           <NavigationBar />
+          <BadgeHeader />
           <main className="pt-12">
             {children}
           </main>
