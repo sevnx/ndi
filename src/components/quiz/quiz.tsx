@@ -4,9 +4,11 @@ import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { shuffle } from "shuffle-seed"
+import { addBadge, BadgeName } from "../badge"
 
 interface QuizContainerProps {
-  questions: Question[]
+  questions: Question[],
+  badge: BadgeName
 }
 
 interface Question {
@@ -15,7 +17,7 @@ interface Question {
   correctIndex: number
 }
 
-const QuizContainer = ({ questions: initialQuestions }: QuizContainerProps) => {
+const QuizContainer = ({ questions: initialQuestions, badge }: QuizContainerProps) => {
   const maxQuestions = initialQuestions.length;
   const [questions, setQuestions] = useState<Question[]>(() => {
     return shuffle([...initialQuestions], "ndi2024")
@@ -54,19 +56,14 @@ const QuizContainer = ({ questions: initialQuestions }: QuizContainerProps) => {
   }
 
   if (!currentQuestion) {
-    return (
-      <Card className="w-full max-w-lg mx-auto">
-        <CardContent className="p-6">
-          <div className="text-center">Quiz Complete!</div>
-        </CardContent>
-      </Card>
-    )
+    addBadge(badge)
+    return null
   }
 
   return (
     <Card className="w-full max-w-lg mx-auto">
       <CardHeader>
-        <CardTitle className="text-xl text-center">Question - {currentQuestionId} of {maxQuestions}</CardTitle>
+        <CardTitle className="text-xl text-center">Question - {currentQuestionId} sur {maxQuestions}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="text-lg text-center">
@@ -98,7 +95,7 @@ const QuizContainer = ({ questions: initialQuestions }: QuizContainerProps) => {
           onClick={nextQuestion}
           disabled={!isAnswered}
         >
-          Next
+          Prochain
         </Button>
       </CardContent>
     </Card>

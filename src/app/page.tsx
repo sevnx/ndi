@@ -6,12 +6,66 @@ import { AnimatedSvg } from '@/components/animated-svg';
 import { addBadge } from '@/components/badge';
 import Banquise from '@/components/banquise';
 import EndPage from '@/components/endpage';
+import QuizContainer from '@/components/quiz/quiz';
 
 export const metadata: Metadata = {
   title: 'Accueil | KeyIcy'
 };
 
 export default function Home() {
+  const questions = [
+    {
+      "question": "Quel phénomène océanique est comparé au système sanguin dans le texte ?",
+      "options": [
+        "Les vagues de surface",
+        "La circulation thermohaline",
+        "Les marées",
+        "Les tsunamis"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quelle proportion de l'oxygène terrestre est produite par les océans ?",
+      "options": [
+        "Moins d'un quart",
+        "Environ un tiers",
+        "Plus de la moitié",
+        "La totalité"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quel organisme marin est principalement responsable de la production d'oxygène dans les océans ?",
+      "options": [
+        "Les récifs coralliens",
+        "Les poissons",
+        "Les algues géantes",
+        "Le phytoplancton"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "À quelle partie du corps humain les récifs coralliens sont-ils comparés ?",
+      "options": [
+        "Au système digestif",
+        "Au système immunitaire",
+        "Au système nerveux",
+        "Au système respiratoire"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "À quoi est comparée la surface des océans dans le texte ?",
+      "options": [
+        "À la peau",
+        "Aux muscles",
+        "Aux os",
+        "Aux cheveux"
+      ],
+      "correctIndex": 0
+    }
+  ];
+
   return (
     <div className="min-h-screen pt-40 pb-12 max-w-[1120px] mx-auto px-4 md:px-0">
       <div className="text-left mb-12">
@@ -99,6 +153,11 @@ export default function Home() {
           </div>
         </div>
         <Separator className="mt-12" />
+      </div>
+      <div>
+        <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
+          <QuizContainer questions={questions} badge='Quiz Main' />
+        </div>
       </div>
       <div className="pt-12 flex justify-center">
         <div className="w-3/4">

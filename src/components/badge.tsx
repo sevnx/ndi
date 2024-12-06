@@ -2,7 +2,6 @@
 
 import badge_captcha from '@/assets/badges/badge_captcha.svg'
 import badge_cookie_fail from '@/assets/badges/badge_cookie_fail.svg'
-import badge_cookie_win from '@/assets/badges/badge_cookie_win.svg'
 import badge_quiz_main from '@/assets/badges/badge_quiz_main.svg'
 import badge_quiz_pod_1 from '@/assets/badges/badge_quiz_pod_1.svg'
 import badge_quiz_pod_2 from '@/assets/badges/badge_quiz_pod_2.svg'
@@ -11,7 +10,7 @@ import badge_retro from '@/assets/badges/badge_retro.svg'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-export type BadgeName = 'Captcha' | 'Cookie Fail' | 'Cookie Win' | 'Quiz Main' | 'Quiz Pod 1' | 'Quiz Pod 2' | 'Read' | 'Retro'
+export type BadgeName = 'Captcha' | 'Cookie Fail' | 'Quiz Main' | 'Quiz Pod 1' | 'Quiz Pod 2' | 'Read' | 'Retro'
 
 interface Badge {
     title: BadgeName;
@@ -21,7 +20,6 @@ interface Badge {
 const BADGES: Badge[] = [
     { title: 'Captcha', icon: badge_captcha },
     { title: 'Cookie Fail', icon: badge_cookie_fail },
-    { title: 'Cookie Win', icon: badge_cookie_win },
     { title: 'Quiz Main', icon: badge_quiz_main },
     { title: 'Quiz Pod 1', icon: badge_quiz_pod_1 },
     { title: 'Quiz Pod 2', icon: badge_quiz_pod_2 },
